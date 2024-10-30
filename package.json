@@ -5,11 +5,11 @@
 	"scripts": {
 		"start": "node server.js"
 	},
+	"dependencies": {
+		"express": "^4.17.1"
+	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
-	"description": "",
-	"dependencies": {
-		"express": "^4.17.1"
-	}
+	"description": ""
 }

@@ -1556,7 +1556,12 @@ const data = [
 ];
 
 app.get("/api/museums", (req, res) => {
-  res.json(museums);
+  try {
+    res.json(museums);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 app.listen(port, () => {
