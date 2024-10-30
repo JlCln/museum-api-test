@@ -1,11 +1,11 @@
-const express = require("express");
-const cors = require("cors");
+import express from "express";
+import cors from "cors";
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors());
 
-const data = [
+const museums = [
   {
     identifiant: "M0002",
     nom_officiel: "musée de La Poterie",
@@ -1555,7 +1555,7 @@ const data = [
   },
 ];
 
-app.get("/api/museums", (req, res) => {
+app.get("/api/museums", (_req, res) => {
   try {
     res.json(museums);
   } catch (error) {
