@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 app.use(cors());
 
@@ -1555,10 +1555,10 @@ const data = [
   },
 ];
 
-app.get("/api/items", (req, res) => {
-  res.json(data);
+app.get("/api/museums", (req, res) => {
+  res.json(museums);
 });
 
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server is running on port ${port}`);
 });
