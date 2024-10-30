@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -1555,7 +1556,7 @@ const museums = [
   },
 ];
 
-app.get("/api/museums", (_req, res) => {
+app.get("/api/museums", (req, res) => {
   try {
     res.json(museums);
   } catch (error) {
